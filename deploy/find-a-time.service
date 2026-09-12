@@ -1,1 +1,12 @@
+[Unit]
+Description=Find-a-Time Flask App
+After=network.target
 
+[Service]
+User=ec2-user
+WorkingDirectory=/home/ec2-user/find-a-time-monolith
+ExecStart=/home/ec2-user/find-a-time-monolith/.venv/bin/python -m src.app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
