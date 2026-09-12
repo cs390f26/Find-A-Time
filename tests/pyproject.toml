@@ -1,1 +1,15 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
 
+[project]
+name = "find-a-time"
+version = "0.1.0"
+description = "A scheduling poll app for finding a meeting time"
+requires-python = ">=3.10"
+dependencies = [
+    "flask",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
