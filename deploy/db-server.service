@@ -1,1 +1,12 @@
+[Unit]
+Description=Find-a-Time PostgreSQL Database
+After=network.target
 
+[Service]
+Type=notify
+User=postgres
+ExecStart=/usr/bin/postgres -D /var/lib/pgsql/data
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
